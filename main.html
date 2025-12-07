@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Highlighted About Text</title>
+  <style>
+    :root{
+      --bg: #0f172a;
+      --card: linear-gradient(135deg,#ffefba 0%, #ffe29f 100%);
+      --accent: #0b1220;
+      --radius: 18px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,200,120,0.06), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(120,180,255,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:1100px;
+      background: rgba(255,255,255,0.03);
+      border-radius:calc(var(--radius) + 6px);
+      padding:40px;
+      box-shadow: 0 10px 30px rgba(3,6,23,0.6);
+      backdrop-filter: blur(6px);
+      display:grid;
+      gap:18px;
+      align-items:center;
+    }
+
+    .highlight {
+      display:block;
+      background: var(--card);
+      color: var(--accent);
+      padding: clamp(18px, 3.5vw, 36px);
+      border-radius: 14px;
+      font-weight: 800;
+      line-height: 1.02;
+      text-align: center;
+      font-size: clamp(28px, 6.5vw, 84px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.35), inset 0 -6px 18px rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .sub {
+      color: #cfe6ff;
+      opacity:0.95;
+      font-size: 15px;
+      text-align:center;
+      max-width:900px;
+    }
+
+    @media (max-width:420px){
+      .card{ padding:18px; }
+      .highlight{ padding:18px; border-radius:12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <img src="tttt.gif"></img>
+    <p class="sub">
+      
+    </p>
+  </main>
+</body>
+</html>
